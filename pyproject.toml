@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "simple-system-design"
+version = "0.1.0"
+description = "This simple system design project will allow you to get hands-on experience in developing a very small but end-to-end system. We are going to use Twitter API endpoint to read filtered tweets, stream these tweets into a messaging queue, RabbitMQ, and store them into a local MongoDB database. This will be happening as when we receive the tweets. We are then going to read the tweets every hour from the database, process them using natural language processing in Python and create a word cloud of important words used in the tweets in the past hour. This word cloud will be refreshed automatically."
+authors = ["Disha Ponganti <dishaponganti@gmail.com>"]
+readme = "README.md"
+packages = [{include = "simple_system_design"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
